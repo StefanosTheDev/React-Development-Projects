@@ -1,0 +1,19 @@
+// Develop A CRUD Application Locally
+// Create A CARD Application With Images, Description
+// Users Will Be Able To Locally Add, Delete, Update, GET The List. Locally.
+// Build A Search Component.
+// Build A Hover / Star Rating.
+
+
+
+You would have a Card Component.
+You would have a Form Component (That would be universal. You would be able to populate, Delete, Create, Update)
+You would have a Search Component.
+You would have a Star Rating Component on the card as well
+You would have a Navbar Component.
+You would have a Logo Component.
+
+
+
+
+// UI 
