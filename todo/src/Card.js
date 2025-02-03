@@ -46,9 +46,10 @@ import { useState } from 'react';
 //
 
 export function CardList({ cards }) {
+  // !!cards?.length swag way to do this.
   return (
-    <h5>
-      {cards ? (
+    <div>
+      {!!cards?.length ? (
         <div>
           {cards.map((card) => (
             <div key={card.id} className="card">
@@ -60,7 +61,7 @@ export function CardList({ cards }) {
       ) : (
         <h1> Cards Do Not Exist </h1>
       )}
-    </h5>
+    </div>
   );
 }
 
@@ -94,17 +95,17 @@ export function Logo() {
 // OUTPUT -> Return That OBJECT in it's Card Form.
 // OUTPUT -> NONE
 export function SearchBar({ query, setQuery }) {
+  const [_query, _setQuery] = useState(query);
   return (
     <div>
       <input
         className="search"
         type="text"
         placeholder="Search Cards"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={(e) => _setQuery(e.target.value)}
       />
-      <button onClick="search" className="search-button">
-        {query}
+      <button onClick={() => setQuery(_query)} className="search-button">
+        Search
       </button>
     </div>
   );
