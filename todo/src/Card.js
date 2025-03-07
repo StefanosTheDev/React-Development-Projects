@@ -45,7 +45,7 @@ import { useState } from 'react';
 // WERE GOING To need a function that maniplualtes the cards and returns that CARD Component.
 //
 
-export function CardList({ cards }) {
+export function CardList({ cards, data }) {
   // !!cards?.length swag way to do this.
   return (
     <div>
@@ -63,6 +63,9 @@ export function CardList({ cards }) {
       )}
     </div>
   );
+}
+export function LoadData() {
+  return <h1> Load Data </h1>;
 }
 
 // LOGO  IS CHILD. // NAVBAR IS PARENT.
@@ -110,3 +113,10 @@ export function SearchBar({ query, setQuery }) {
     </div>
   );
 }
+
+// IF CARDS EXIST IN SAMPLE DATA
+// RENDER DATA
+// IF A QUERY IS INBOUND -> AND QUERY IS VALID. RETURN THAT CARD.
+// IF NOT RENDER DONT EXIT
+
+// REFRESH PAGE WILL RESET EVERYTING.

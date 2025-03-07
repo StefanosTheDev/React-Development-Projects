@@ -14,6 +14,3 @@ You would have a Navbar Component.
 You would have a Logo Component.
 
 
-
-
-// UI 

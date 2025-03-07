@@ -40,15 +40,20 @@ function App() {
         'Design and develop a personal portfolio using React and Tailwind CSS.',
     },
   ];
-  const users = ['John Doe', 'Jane Smith', 'Alice Johnson', 'Bob Brown'];
   const [cards, setCards] = useState(sampleCards);
   const [query, setQuery] = useState('');
 
+  // WHY IS THIS BEING HIT PAGE ON LOAD? // RESEARCH THIS
+  // CONDITIONAL.
   // Filter to find the Number
-  useEffect(
-    () => setCards(sampleCards.filter((item) => item.id === Number(query))),
-    [query]
-  );
+  useEffect(() => {
+    if (query) {
+      setCards(sampleCards.filter((item) => item.id === Number(query)));
+      console.log('query exists');
+    } else {
+      setCards(sampleCards);
+    }
+  }, [query]);
   return (
     <div className="app">
       <h1>
