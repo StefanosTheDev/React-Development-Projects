@@ -1,13 +1,17 @@
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #333;
   color: white;
+  padding: 1rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* Search Input */
 .search {
-  justify-self: center;
   border: none;
   padding: 1.1rem 1.6rem;
   font-size: 1.8rem;
@@ -15,29 +19,74 @@
   align-items: center;
   transition: all 0.3s;
   color: var(--color-text);
-
-  /* background-color: var(--color-background-900); */
   background-color: var(--color-primary-light);
+  outline: none;
+  width: 100%; /* Makes it fully responsive */
+  max-width: 400px;
 }
+
 /* Container that holds both Box components */
 .box-container {
   display: flex;
-  justify-content: space-between; /* Push boxes to the left and right */
-  align-items: center; /* Aligns them properly */
-  width: 80%;
+  flex-wrap: wrap; /* Ensures boxes wrap instead of overflowing */
+  justify-content: space-between; /* Spreads boxes evenly */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Limits width to prevent stretching */
   padding: 40px;
+  gap: 20px; /* Adds space between boxes */
+  overflow: auto; /* Enables scrolling if needed */
+  max-height: 90vh; /* Prevents overflow but allows scrolling */
 }
 
 /* Styles for the reusable Box */
 .Box {
-  width: 300px; /* Adjust as needed */
-  height: 500px; /* Adjust height as needed */
+  width: 500px; /* Fixed width */
+  min-height: 200px; /* Ensures content doesn't shrink */
+  max-height: 1000px; /* Prevents excessive height */
   background-color: #3498db; /* Example color */
   color: white;
-  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
   font-weight: bold;
   border-radius: 8px;
+  padding: 20px;
+  overflow: hidden; /* Prevents content from overflowing */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Make boxes stack properly on smaller screens */
+@media (max-width: 768px) {
+  .box-container {
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center; /* Center the items */
+  }
+
+  .Box {
+    width: 90%; /* Make it responsive */
+  }
+}
+.contact-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #2980b9;
+}
+
+.selected-contact {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  width: 300px;
 }

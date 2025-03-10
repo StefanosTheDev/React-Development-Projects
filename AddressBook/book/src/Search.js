@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { AppContext } from './AppContext';
 
 export function Search() {
-  const [query, setQuery] = useState('');
+  const { query, setQuery } = useContext(AppContext); // 🔥 Access Global Query
 
   return (
     <input

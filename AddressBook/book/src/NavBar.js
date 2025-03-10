@@ -1,11 +1,10 @@
 import React from 'react';
 import { Search } from './Search';
 
-export function NavBar() {
+export function NavBar({ children }) {
   return (
     <nav className="navbar">
       <Logo />
-      <Search />
     </nav>
   );
 }

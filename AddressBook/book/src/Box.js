@@ -1,9 +1,9 @@
 import React from 'react';
-
-export function Box() {
+import { ContactsList } from './ContactList';
+export function Box({ children }) {
   return (
     <div className="container">
-      <div className="Box">Box</div>
+      <div className="Box">{children}</div>
     </div>
   );
 }
