@@ -1,0 +1,13 @@
+Goal Of This Project
+
+Develop An Address BOok Application That IMplement everything learned from Sections 1-12
+
+// I read users from an API Fake Data From like a Dummy JSON
+// I implement a Search Feature that reflects from the bootcamp
+// I can take the users from the list and categorize them to something else. Like Move Them over to a "Clicked Sequence" Where if i do this i get to see more of the profile.
+// Have a hover event where i can click it and add them to favorites. If i hover over the user profile. iit will show up as a light grey or something
+//  Lets say i havee them set as favorites. At least for this instance. I want to be able to iterate through each of them and see it be unique. SO the states of the lets say of the profile. If i update it will be actually changed.
+
+
+// Lets Do a Navbbar and logo. as well. Make everyting reusable. 
+// Lets then have an option to view everyone as a Table. 
