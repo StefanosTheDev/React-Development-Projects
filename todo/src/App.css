@@ -1,24 +1,79 @@
-.card {
-  width: 300px;
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   padding: 20px;
-  margin: 10px auto;
-  background-color: #ffffff;
+  margin: 0;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e0e0e0;
-  font-family: 'Arial, sans-serif';
 }
 
-.card h1 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+/* ✅ Dropdown Styling */
+div label {
+  font-weight: bold;
+  margin-right: 10px;
 }
 
-.card p {
-  font-size: 1rem;
-  color: #666666;
+select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.nav-bar {
-  background-color: pink;
+select:hover {
+  border-color: #007bff;
+}
+
+/* ✅ Task Table Styling */
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.task-table th,
+.task-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.task-table th {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.task-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.task-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* ✅ Loader */
+.loader {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* ✅ Error Message */
+.error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
 }
