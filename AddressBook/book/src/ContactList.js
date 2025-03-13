@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AppContext } from './AppContext';
 
-// Stef
 export function ContactsList() {
   const {
     contacts,
@@ -72,24 +71,24 @@ export function ContactsList() {
     </div>
   );
 }
-
 export function ClickedContact() {
-  const { contact } = useContext(AppContext);
+  const { contact } = useContext(AppContext); // Access selected contact
+  const favorites = [];
 
   if (!contact) return <p>No contact selected yet.</p>; // Prevents crashes
+
+  favorites.push(contact); // Add the selected contact to the favorites array
 
   return (
     <div className="clicked-contact">
       <h3>Selected Contact:</h3>
-      <p>
-        <strong>Name:</strong> {contact.firstName} {contact.lastName}
-      </p>
-      <p>
-        <strong>Email:</strong> {contact.email}
-      </p>
-      <p>
-        <strong>Phone:</strong> {contact.phone}
-      </p>
+      <ul>
+        {favorites.map((item, index) => (
+          <li key={index}>
+            {item.firstName} {item.lastName} - {item.email}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

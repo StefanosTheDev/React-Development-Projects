@@ -10,4 +10,8 @@ Develop An Address BOok Application That IMplement everything learned from Secti
 
 
 // Lets Do a Navbbar and logo. as well. Make everyting reusable. 
-// Lets then have an option to view everyone as a Table. 
+// Lets then have an option to view everyone as a Table.
+
+
+Okay so right now the next thing i wnat to do is when i Click the Contact. Save it into the Contact Selected.
+
