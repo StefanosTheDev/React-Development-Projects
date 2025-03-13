@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AppContext } from './AppContext';
 
+// Stef
 export function ContactsList() {
   const {
     contacts,
