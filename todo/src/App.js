@@ -4,18 +4,18 @@ import './App.css';
 function App() {
   return (
     <div className="app">
-      <LoadUsers />
+      <LoadTasks />
     </div>
   );
 }
 export default App;
 
-// ✅ Fetch Tasks, Sort & Filter with a Dropdown
-function LoadUsers() {
+// Fetch Tasks, Sort & Filter with a Dropdown
+function LoadTasks() {
   const [tasks, setTasks] = useState([]); // Stores tasks from API
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [sortBy, setSortBy] = useState('all'); // ✅ Default filter is "All"
+  const [sortBy, setSortBy] = useState('all'); // Default filter is "All"
 
   useEffect(() => {
     async function fetchTasks() {
@@ -37,7 +37,7 @@ function LoadUsers() {
     fetchTasks();
   }, []);
 
-  // ✅ Derived State: Filter Tasks based on `sortBy`
+  //  Derived State: Filter Tasks based on `sortBy`
   const filteredTasks = tasks.filter((task) => {
     if (sortBy === 'completed') return task.status === 'completed';
     if (sortBy === 'pending') return task.status === 'incomplete';
@@ -54,7 +54,7 @@ function LoadUsers() {
   );
 }
 
-// ✅ Sorting Dropdown Component
+// Sorting Dropdown Component
 function SortDropdown({ sortBy, setSortBy }) {
   return (
     <div>
@@ -68,7 +68,7 @@ function SortDropdown({ sortBy, setSortBy }) {
   );
 }
 
-// ✅ Task Table Component (Displays tasks in a table)
+//  Task Table Component (Displays tasks in a table)
 function TaskTable({ tasks }) {
   return (
     <table className="task-table">
@@ -100,16 +100,20 @@ function TaskTable({ tasks }) {
   );
 }
 
-// ✅ Loader Component
+// Loader Component
 function Loader() {
   return <p className="loader">Loading .. </p>;
 }
 
-// ✅ Error Message Component
+//  Error Message Component
 function ErrorMessage({ message }) {
   return (
     <p className="error">
       <span>XXXX</span> {message}
     </p>
   );
+}
+
+function TaskDetails({ id }) {
+  //
 }
